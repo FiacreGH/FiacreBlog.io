@@ -1,0 +1,12 @@
+<!doctype html>
+<html lang="en">
+{% for stylesheet in theme_paths('css/style.css') %}
+<link rel="stylesheet" type="text/css" href="{{ site.url }}/{{ stylesheet }}"/>
+{% endfor %}
+<head>
+	<meta charset="UTF-8">
+</head>
+<body>
+{% block content %}{% endblock%}
+</body>
+</html>

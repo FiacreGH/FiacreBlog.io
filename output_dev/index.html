@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<link rel="stylesheet" type="text/css" href="/themes/yourname/themename/css/style.css"/>
+<link rel="stylesheet" type="text/css" href="/css/style.css"/>
+<head>
+	<meta charset="UTF-8">
+</head>
+<body>
+<hr />
+
+<h1><strong>DEVELOPPEMENT DE PAGES WEB STATIQUES</strong></h1>
+
+<hr />
+
+<h2>Comment utiliser sculpin comme outil de developpement</h2>
+
+<h3>les différentes étapes sont les suivantes:</h3>
+
+<ul>
+<li>Installez sculpin sur vortre ordinateur sous linux</li>
+</ul>
+
+<p>Ouvrez votre terminal puis, executez la commande: <code>wget https://download.sculpin.io/sculpin.phar</code></p>
+
+<p>Puis:  <code>chmod +x sculpin.phar</code></p>
+
+<p>Et pour finir:  <code>mv sculpin.phar ~/bin/sculpin</code></p>
+
+<p>Pour vérifier que sculpin est bien installé, tapez la commande:  <code>sculpin -version</code></p>
+
+<ul>
+<li>Structure de votre repertoire de travail</li>
+</ul>
+
+<p>Creer un repertoire dans votre dossier personel <code>~/Project</code> ou autre dependant de la distribution linux qui se trouve installée sur votre machine</p>
+
+<p>Par exemple <code>~/Project/mkdir mon-premier-site-sculpin</code></p>
+
+<p>Puis dans ce repertoire vous creer le dossier ou seront mis vos fichiers sources; ce dossier se nomme <code>source</code></p>
+
+<p>Pour cela tapez cette commande: <code>mkdir source</code></p>
+
+<ul>
+<li>Contenu de la source</li>
+</ul>
+
+<p>Il s'agit du contenu de votre site, un fichier <code>*.md</code> doit être creé dans la source.</p>
+
+<p>NB: ce fichier avec l'extension <code>.md</code>(md pour markdown) est celui a aprtir du quel sculpin vas generer du <code>*.html</code> lisible par les navigateurs</p>
+
+<p>Obtenez plus d'info plus sur markdown regardez <a href="http://en.wikipedia.org/wiki/Markdown#Example">ici</a>.</p>
+
+<p>Mettez du contenu dans votre fichier .md</p>
+
+<p>Par exemple:</p>
+
+<p><code>---</code></p>
+
+<p><code>---</code></p>
+
+<p><code># Hello World</code></p>
+
+<p><code>Ceci est un contenu de test</code></p>
+
+<ul>
+<li>Generation du code html</li>
+</ul>
+
+<p>Pour générer le code html, assurez vous d'être dans le repertoire de votre site puis executez la commande:</p>
+
+<p><code>sculpin generate --watch --server</code></p>
+
+<p>NB: cette commande démarre un serveur qui permet d'afficher votre site en local (code html generee a partir du fichier .md).</p>
+
+<p>Le code html génerée se place automatiquement dans un dossier creé par sculpin et nomé <code>output_dev</code></p>
+
+<p>Une fois le serveur lancé vous pourez voir votre site a cette adresse: <code>http://localhost:8000</code></p>
+
+<p>Vous avez donc le rendu il ne reste qu'à embelir votre site à present!</p>
+
+<ul>
+<li>Mise en page</li>
+</ul>
+
+<p>--Pour l'ajout de theme nous procederons comme ce qui suit:
+Créer un dossier dans la racine du projet avec la commande suivante: <code>mkdir -p app/config</code>
+Créer le fichier <code>sculpin_kernel.yml</code> qui servira à personaliser le comportement de sculpin et y mettre le contenu suivant:</p>
+
+<p><code>sculpin_theme:</code></p>
+
+<pre><code>    theme: yourname/themename
+</code></pre>
+
+<p>Maintenant, il faudrais créer un dossier qui contiendra le fichier de mise en page.
+Pour cela taper la commande: <code>mkdir -p source/themes/yourname/yourtheme/_layouts</code></p>
+
+<p>--Pour la mise en page, nous allons faire l'usage de <a href="http://twig.sensiolabs.org/documentation">"twig"</a> qui est un moteur de template et qui generera notre mise en forme.
+Pour créer le fichier twig, placez vous dans l'emplacement:</p>
+
+<p><code>/Project/mkdir mon-premier-site-sculpin/source/themes/yourname/yourtheme/_layouts</code></p>
+
+<p>Puis exécutez la commande : <code>touch default.twig.html</code></p>
+
+<p>Mettez ce contenu dans le fichier <code>touch default.twig.html</code>:</p>
+
+<p>Très bientôt la suite!</p>
+
+<h1>REALISATION: FIACRE SANKARA ( aidé par FUDRIOT) :)</h1>
+</body>
+</html>
